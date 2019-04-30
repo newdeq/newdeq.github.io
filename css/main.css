@@ -262,7 +262,7 @@ h1, h2, h3, h4, h5 {
 .btn {
   position: relative;
   float: left;
-  left: 26%;
+
   border-radius: 5px;
   padding: 5px 9px;
   font-size: 1.2em;
