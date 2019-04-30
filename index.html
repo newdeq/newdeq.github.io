@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>REDKIT</title>
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+  <header>
+    <div id="logo" onclick="slowScroll('#top')">
+
+      <span>REDKIT</span>
+
+    </div>
+    <div id="about">
+      <a href="#" onclick="slowScroll('#rules')" title="Правила">Правила</a>
+      <a href="#" onclick="slowScroll('#faq')" title="Ответы на вопросы">FAQ</a>
+      <a href="#" onclick="slowScroll('#contacts')" title="Обратная связь">Зворотній зв'язок</a>
+      <a href="#" onclick="slowScroll('#authorization')" title="Вход">Увійти</a>
+
+
+    </div>
+
+  </header>
+
+  <div id="top">
+    <h1>Пройди свій шлях</h1>
+    <h3>до отримання знань!</h3>
+
+  </div>
+
+  <div id="rules">
+    <div class="intro">
+      <h2>Правила для проходження квесту.</h2>
+
+    </div>
+    <div class="text">
+      <span>І тут ви бачите правила які потрібні щоб пройти квест який ми ще не придумали і хз придумаємо його взагалі, а навіть якщо придумаємо то як ми його реалізуємо?)І тут ви бачите правила які потрібні щоб пройти квест який ми ще не придумали і хз придумаємо його взагалі, а навіть якщо придумаємо то як ми його реалізуємо?)І тут ви бачите правила які потрібні щоб пройти квест який ми ще не придумали і хз придумаємо його взагалі, а навіть якщо придумаємо то як ми його реалізуємо?)</span>
+    </div>
+  </div>
+  <div id="faq">
+      <div>
+        <span class="title">Заголовок.</span><br>
+        <span class="heading">Вопрос?</span>
+        <p>Ответ на вопрос.Ответ на вопрос</p>
+        <span class="heading">Вопрос?</span>
+        <p>Ответ на вопрос.Ответ на вопрос.</p>
+        <span class="heading">Вопрос?</span>
+        <p>Ответ на вопрос.Ответ на вопрос.</p>
+      </div>
+    <div>
+      <span class="title">Заголовок.</span><br>
+      <span class="heading">Вопрос?</span>
+      <p>Ответ на вопрос.Ответ на вопрос</p>
+      <span class="heading">Вопрос?</span>
+      <p>Ответ на вопрос.Ответ на вопрос.</p>
+      <span class="heading">Вопрос?</span>
+      <p>Ответ на вопрос.Ответ на вопрос.</p>
+    </div>
+    <div>
+      <span class="title">Заголовок.</span><br>
+      <span class="heading">Вопрос?</span>
+      <p>Ответ на вопрос.Ответ на вопрос</p>
+      <span class="heading">Вопрос?</span>
+      <p>Ответ на вопрос.Ответ на вопрос.</p>
+      <span class="heading">Вопрос?</span>
+      <p>Ответ на вопрос.Ответ на вопрос.</p>
+    </div>
+    </div>
+
+
+  <div id="contacts">
+    <center><h5>Зворотній зв'язок</h5></center>
+    <form id="form_input" action="mail.php" method="POST">
+      <label for="name">Ім'я<span>*</span></label><br>
+      <input type="text" placeholder="Введіть ім'я" name="name" id="name"><br>
+      <label for="email">Єлектронна пошта<span>*</span></label><br>
+      <input type="email" placeholder="Введіть email" name="email" id="email"><br>
+      <label for="message">Повідомлення<span>*</span></label><br>
+      <textarea placeholder="Введіть ваше повідомлення" name="message" id="message"></textarea><br>
+      <div id="mess_send" class="btn">Надіслати</div>
+    </form>
+  </div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script>
+    function slowScroll(id) {
+      $('html, body').animate({
+        scrollTop: $(id).offset().top
+      }, 500);
+    }
+
+    $(document).on("scroll", function () {
+      if($(window).scrollTop() === 0)
+        $("header").removeClass("fixed");
+      else
+        $("header").attr("class", "fixed");
+    });
+  </script>
+
+
+  <div id="floatTip"></div>
+</body>
+</html>
