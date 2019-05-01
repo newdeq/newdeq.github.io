@@ -6,6 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>REDKIT</title>
   <link rel="stylesheet" href="css/main.css">
+
 </head>
 <body>
   <header>
@@ -74,18 +75,30 @@
   <div id="contacts">
     <center><h5>Зворотній зв'язок</h5></center>
     <form id="form_input" action="mail.php" method="POST">
+      <input type="hidden" name="project_name" value="Site Name">
+		<input type="hidden" name="admin_email" value="redkit@ukr.net">
+		<input type="hidden" name="form_subject" value="Form Subject">
+
       <label for="name">Ім'я<span>*</span></label><br>
-      <input type="text" placeholder="Введіть ім'я" name="name" id="name"><br>
+      <input type="text" placeholder="Введіть ім'я" name="Name" id="name" required><br>
       <label for="email">Єлектронна пошта<span>*</span></label><br>
-      <input type="email" placeholder="Введіть email" name="email" id="email"><br>
+      <input type="text" placeholder="Введіть email" name="E-mail" id="email" required><br>
       <label for="message">Повідомлення<span>*</span></label><br>
-      <textarea placeholder="Введіть ваше повідомлення" name="message" id="message"></textarea><br>
+      <textarea type="text" placeholder="Введіть ваше повідомлення" name="Message" id="message"></textarea><br>
 
       <button type="submit" class="btn btn-primary">Надіслати повідомлення</button>
     </form>
   </div>
 
+
+
+
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+  <script src="http://getbootstrap.com/assets/js/ie10-viewport-bug-workaround.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+	<script src="script.js"></script>
   <script>
     function slowScroll(id) {
       $('html, body').animate({
